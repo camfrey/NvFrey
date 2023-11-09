@@ -11,6 +11,7 @@ opt.showmode = false
 
 opt.clipboard = "unnamedplus"
 opt.cursorline = true
+opt.cursorlineopt = 'number'
 
 -- Indenting
 opt.expandtab = true
@@ -85,9 +86,6 @@ autocmd("BufWritePost", {
     require("plenary.reload").reload_module(module)
 
     local config = require "nvconfig"
-
-    vim.g.nvchad_theme = config.ui.theme
-    vim.g.transparency = config.ui.transparency
 
     -- statusline
     if config.ui.statusline.theme ~= "custom" then
